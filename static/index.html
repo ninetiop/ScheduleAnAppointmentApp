@@ -1,0 +1,35 @@
+<div id="login" style="text-align:center">
+  <button type="button" onclick="location.href='/login'" class="btn btn-success">Login</button>
+  </div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<link rel="stylesheet" href="{{static_path}}css/index.css">
+<div class="container">  
+  <form id="contact" action="javascript:void(0);">
+    <h3>Booking reservation</h3>
+    <h4>Remplis le formulaire avec une date et le tour est joué !</h4>
+    <fieldset>
+      <input placeholder="Nom" pattern="^[a-zA-Z]+$" id="nom" type="text" tabindex="1" required autofocus>
+    </fieldset>
+    <fieldset>
+      <input placeholder="Prenom" id="prenom" pattern="^[a-zA-Z]+$" type="text" tabindex="2" required>
+    </fieldset>
+    <fieldset>
+      <h4>Veuillez choisir une date</h4>
+      <input type="date" id="date">
+      <div id="datepicker" class="calendar"></div>
+    </fieldset>
+    <fieldset id="fieldset-slot" hidden>
+      <h4>Veuillez choisir un créneau</h4>
+      <select id="select">
+      </select>
+    </fieldset>
+    <fieldset>
+      <button name="Valider" id="contact-submit">Valider</button>
+    </fieldset>
+    <div id="alertNotif"></div>
+  </form>
+</div>
+
+<!-- SGVsbG8hIE15IG5hbWUgaXMgU2FyYSBNYXphbC4gV2VsY29tZSB0byBteSBDb2RlUGVuIQ== -->
+<script src="{{ static_path }}js/jquery-3.7.0.min.js"></script>
+<script src="{{ static_path }}js/index.js"></script>
